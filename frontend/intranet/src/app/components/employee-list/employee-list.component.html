@@ -1,3 +1,13 @@
-<p *ngFor="let Employee of employees">
-  {{Employee.name}}:{{Employee.email}}:{{Employee.phone}}
-</p>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="push" [(opened)]="opened">Sidnav</mat-sidenav>
+  <mat-sidenav-content>Main 
+    <button (click)="opened=!opened">togelle open</button>
+    <p *ngFor="let Employee of employees">
+      {{Employee.name}}:{{Employee.email}}:{{Employee.phone}}
+    </p>
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>
+
+
