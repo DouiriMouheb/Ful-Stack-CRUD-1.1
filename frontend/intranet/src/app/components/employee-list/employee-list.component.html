@@ -1,11 +1,35 @@
 
 <mat-sidenav-container>
   <mat-sidenav mode="push" [(opened)]="opened">Sidnav</mat-sidenav>
-  <mat-sidenav-content>Main 
-    <button (click)="opened=!opened">togelle open</button>
-    <p *ngFor="let Employee of employees">
-      {{Employee.name}}:{{Employee.email}}:{{Employee.phone}}
-    </p>
+  <mat-sidenav-content>
+    <div class="container-fluid" style="padding: 50px; align-content: space-between;">
+    <button type="button" (click)="opened=!opened" class="btn btn-primary btn-lg">togelle open</button>
+    <button type="button" (click)="opened=!opened" class="btn btn-primary btn-lg">togelle open</button>
+    <button type="button" (click)="opened=!opened" class="btn btn-primary btn-lg">togelle open</button>
+    <button type="button" (click)="opened=!opened" class="btn btn-primary btn-lg">togelle open</button>
+    <button type="button" (click)="opened=!opened" class="btn btn-primary btn-lg">togelle open</button>
+    
+  </div>
+  <div class="container-fluid" style="padding: 50px;">
+    <table class="table table-success table-striped" style="text-align: center;" >
+      <thead>
+        <tr >
+          <th >Name</th>
+          <th >Email</th>
+          <th >Phone Number</th>
+         </thead>
+         <tbody>
+          <tr *ngFor="let Employee of employees">
+            <td>{{Employee.name}}</td>
+            <td>{{Employee.email}}</td>
+            <td>{{Employee.phone}}</td>
+           </tr>
+         </tbody>
+    
+    
+    </table>
+  </div>
+  
   </mat-sidenav-content>
   
 </mat-sidenav-container>
