@@ -15,9 +15,22 @@ private baseUrl='http://localhost:9090/api/employees';
       map(response => response._embedded.employees)
     );
   }
+  getEmployeeListPaginate(thePage: number,thePageSize: number): Observable<Employee[]>{
+    const url = `${this.baseUrl}`+`?page=${thePage}&size=${thePageSize}`
+    return this.httpClient.get<GetResponse>(url).pipe(
+      map(response => response._embedded.employees
+        )
+    );
+  }
 }
 interface GetResponse{
   _embedded: {
     employees: Employee[];
+  },
+  page:{
+    size: number,
+    totalElements:number,
+    totalPages:number,
+    number:number
   }
 }

@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     MatSidenavModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    NgbModule,
+    NgxPaginationModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

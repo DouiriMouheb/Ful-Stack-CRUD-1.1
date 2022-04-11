@@ -8,3 +8,7 @@ mat-sidenav {
   background-color: lightcoral;
   width: 200px;
 }
+.my-pagination /deep/ .ngx-pagination .current {
+  background: rgb(0, 60, 255);
+  
+}
